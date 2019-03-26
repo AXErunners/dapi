@@ -1,0 +1,26 @@
+{
+  "network": "testnet",
+  "port": 3001,
+  "services": [
+    "axed",
+    "web",
+    "@axerunners/insight-api"
+  ],
+  "servicesConfig": {
+    "axed": {
+      "connect": [
+        {
+          "rpchost": "127.0.0.1",
+          "rpcport": 30002,
+          "rpcuser": "axerpc",
+          "rpcpassword": "password",
+          "zmqpubrawtx": "tcp://axecore:30003",
+          "zmqpubhashblock": "tcp://axecore:30003"
+        }
+      ]
+    },
+    "@axerunners/insight-api": {
+      "disableRateLimiter": true
+    }
+  }
+}
